@@ -1,0 +1,36 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+img{max-width: 100%;}
+button{cursor: pointer;}
+table{width: 100%;}
+body{background: #fff; color: #333;}
+
+/*  */
+.inner{width: 1200px; margin: auto; /* height: 700px; */ /* background: #fc6; */ }
+header{position:relative; height: 100px; background: #ceb398; padding-top: 35px; padding-left: 10px;}
+header h1{width: 200px; height: 40px;} /* 문제에서주어짐 */
+header h1 a {display: block;} /* 로고 */
+
+/* position:absolute로 공중에 띄어준다. */
+nav{position: absolute; top:40px; right: 0;}
+
+/* 아래의 경로는 네비의 탑, 아우터, 팬츠, 악세서리 */
+nav>ul{display: flex;}
+/* a태그는 속성이 나란히 배치된다. block은 혼자 한줄을 차지한다. */
+nav>ul>li>a{display: block; width: 120px; background: #fff; text-align: center; font-weight: bold; color: #ceb398; padding: 10px;}
+nav>ul>li>a:hover{color: #333; background: #ceb398;}
+
+/* display:block을 써야 너비가 들어간다. */
+.sub li a{background: #fff; display: block; padding: 5px; text-align: center; font-size: 14px;}
+.sub li a:hover{background: #f3e2d2;}
+
+
+
+.slide{height: 300px; background: #fc9;}
+.con{height: 200px; background: #369; display: flex;}
+.con article{width: 400px; height: 100%;}
+.con1{background: pink;}
+.con2{background: skyblue;}
+.con3{background: purple;}
+footer{height: 100px; background: #333;}
