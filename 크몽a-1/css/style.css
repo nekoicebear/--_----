@@ -22,15 +22,29 @@ nav>ul>li>a{display: block; width: 120px; background: #fff; text-align: center; 
 nav>ul>li>a:hover{color: #333; background: #ceb398;}
 
 /* display:block을 써야 너비가 들어간다. */
+.sub{display:none}
 .sub li a{background: #fff; display: block; padding: 5px; text-align: center; font-size: 14px;}
 .sub li a:hover{background: #f3e2d2;}
 
 
 
-.slide{height: 300px; background: #fc9;}
+.slide{position: relative; height: 300px; background: #fc9; overflow:hidden;}
+/* 900인 이유는 슬라이드 3개를 연결했을 때 (세로로)총 300+300+300=900이다. */
+.slide ul{position:absolute; top:0; left:0; height: 900px;}
+.slide ul li{position: relative; width: 1200px; height: 300px;}
+.slide ul li.s1{background: url(../D-2_수험자제공파일/B.Slide/Slide_1.jpg) no-repeat center/cover;}
+.slide ul li.s2{background: url(../D-2_수험자제공파일/B.Slide/Slide_2.jpg) no-repeat center/cover;}
+.slide ul li.s3{background: url(../D-2_수험자제공파일/B.Slide/Slide_3.jpg) no-repeat center/cover;}
+/* transform:translate(x축기준 이동시킬 값, y축 기준 이동 시킬 값) */
+.slide ul li a p{background: #ceb398; position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; border-radius: 50%; font-size: 28px; font-weight: bold;}
+
+
+
 .con{height: 200px; background: #369; display: flex;}
 .con article{width: 400px; height: 100%;}
 .con1{background: pink;}
+.con1 .tabmenu li{width: 150px; display: inline-block; background: #fcf0ea;}
+.con1 .tabmenu li a{display: block; text-align: center; padding: 10px 0; font-weight: bold;}
 .con2{background: skyblue;}
 .con3{background: purple;}
 footer{height: 100px; background: #333;}
